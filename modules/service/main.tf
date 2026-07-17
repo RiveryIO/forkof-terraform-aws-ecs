@@ -1003,6 +1003,7 @@ resource "aws_ecs_task_definition" "this" {
 
   lifecycle {
     create_before_destroy = true
+    ignore_changes        = [container_definitions]
   }
 }
 
